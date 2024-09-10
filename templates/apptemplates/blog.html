@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block navbar %}
+<div class="header" style="background: url('{{blog.img.url}}') no-repeat center center fixed;background-size: cover;">
+  <div class="bg-color">
+    {% include "apptemplates/elements/navbar.html" with page="home" %}
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="banner-info text-center wow fadeIn delay-05s">
+            <h1 class="bnr-title"> Blog </h1>
+            <h2 class="bnr-sub-title">{{blog.Title}}</h2>
+            <p class="bnr-para">{{blog.Discription}}</p>
+            <div class="overlay-detail">
+              <a href="#feature"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block main %}
+<section id="blogsection" class ="section-blog-padding p-5" >
+  {{blog.Text.html|safe}}
+</section>
+{% endblock %}
+{% block footer %}
+  {% include "apptemplates/elements/footer.html" with airdrops=airdrops blogs=imp %}
+{% endblock %}

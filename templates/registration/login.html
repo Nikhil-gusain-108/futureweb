@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %} login{% endblock %}
+{% block style %} <link rel="stylesheet" href={% static "css/login.css" %}> {% endblock %}
+{% block main %}
+<a class="mt-3" href={% url "home" %}>Home</a>
+<div class="login-form">
+    <div class="loginText">
+        <div class="logintxt">
+            <h3>Welcome to <br> <span class="green"> future earners blog!</span></h3>
+            <p>Use the provided username and password to log-in!</p>
+        </div>
+    </div>
+    <div class="loginform">
+        <h2>Log-In</h2>
+        <form action={% url "login" %} method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class= "btn btn-success loginBtn">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

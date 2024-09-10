@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href={% static "css/form.css" %}>
+{% endblock %}
+{% block main %}
+{{form.media}}
+<div class="formdiv">
+    <form action={% url "blog_add" %} method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
+</div>
+{% endblock %}

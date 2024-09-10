@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block navbar %}
+<div class="header">
+  <div class="bg-color">
+    {% include "apptemplates/elements/navbar.html" with page="home" %}
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="banner-info text-center wow fadeIn delay-05s">
+            <h1 class="bnr-title">We are at <span> Future Earners</span></h1>
+            <h2 class="bnr-sub-title">Starting a new crypto journey!!</h2>
+            <p class="bnr-para">We are Future Earners, your trusted guide in the exciting world of cryptocurrency. <br> Whether you're just starting out or looking to deepen your understanding, we're here to help you navigate the complexities of the crypto space.<br> Join us as we explore new opportunities, share valuable insights, and empower you to achieve your financial goals in this dynamic and ever-evolving market.</p>
+            <div class="overlay-detail">
+              <a href="#feature"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block main %}
+  {% include "apptemplates/elements/features.html" %}
+  {% include "apptemplates/elements/service.html" %}
+  {% include "apptemplates/elements/portfolioSection.html" with airdrop=finished%}
+  {% include "apptemplates/elements/testimonialSection.html" %}
+  {% include "apptemplates/elements/blogSection.html" with blogs=recent %}
+{% endblock %}
+{% block footer %}
+  {% include "apptemplates/elements/footer.html" with airdrops=airdrops blogs=imp %}
+{% endblock %}

@@ -1,0 +1,61 @@
+<footer class="footer-04">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+        <h2 class="footer-heading"><p class="blue-bg"> <span class ="logo-dec">Future</span> <span class="white">Earners</span></p> </h2>
+        <p>From high-yield airdrops to the latest insights, we help you maximize earnings with transparency and expert tips. Join our community and start earning today!</p>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+        <h2 class="footer-heading">Airdrops</h2>
+        <ul class="list-unstyled">
+          {% for airdrop in airdrops %}
+          <li><a href={% url "blog" airdrop.blog.id %} class="py-1 d-block">{{airdrop.Name|capfirst}}</a></li>
+          <p>
+            <a herf= class="text-white"> </a>
+          </p>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+        <h2 class="footer-heading">Must read</h2>
+        <div class="tagcloud">
+          {% for blog in imp %}
+          <p>
+            <a href={% url "blog" blog.id %} class="tag-cloud-link">{{blog.Title|capfirst}}</a>
+          </p>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+        <h2 class="footer-heading">Subcribe</h2>
+        <form action="#" class="subscribe-form">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control rounded-left" placeholder="Enter email address">
+            <button type="submit" class=" btn-submit mt-2">Submit</button>
+          </div>
+        </form>
+        <h2 class="footer-heading mt-5">Follow us</h2>
+        <ul class="ftco-footer-social p-0">
+          <li><a href="https://x.com/Future_Earner?t=iKhKNokFtGdikq_NPhVuoA&s=09" target='blank'
+            class="btn btn-outline-light btn-floating m-1" class="black" role="button"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+            </svg></a></li>
+          <!-- telegram -->
+          <li><a href="https://t.me/future_earners" target='blank' class="btn btn-outline-light btn-floating m-1"
+            class="text-white" role="button"><i class="bi bi-telegram h3"></i></a></li>
+          <!-- Instagram -->
+          <li><a href="https://www.instagram.com/future_earner09?igsh=MXFjOW5nZDIzN2RseA==" target='blank'
+            class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+              class="bi bi-instagram h3 pink"></i></a></li>
+          <!-- You_tube -->
+          <li><a href="https://www.youtube.com/@Future_earners" target='blank'
+            class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+              class="bi bi-youtube h3 red"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

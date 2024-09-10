@@ -1,0 +1,22 @@
+<section id="portfolio" class="section-padding wow fadeInUp delay-05s">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="service-title pad-bt15">Recent Airdrops</h2>
+          <p class="sub-title pad-bt15">Explore our completed airdrops and see how they performed. Review past opportunities and their results to stay informed for future airdrop strategies.</p>
+          <hr class="bottom-line">
+        </div>
+        {% for airdrops in airdrop %}
+        <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+          <figure>
+            <img src= {{airdrops.img.url}} class="img-responsive">
+            <figcaption>
+              <h2>{{airdrops.Name|capfirst}} </h2>
+              <p>{{airdrops.discription|capfirst}}</p>
+            </figcaption>
+          </figure>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>

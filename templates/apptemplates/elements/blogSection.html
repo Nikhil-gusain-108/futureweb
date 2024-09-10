@@ -1,0 +1,33 @@
+<section id="blog" class="section-padding wow fadeInUp delay-05s">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="service-title pad-bt15">Latest from our blog</h2>
+          <p class="sub-title pad-bt15">Stay ahead in the crypto world with our latest blog posts. We provide timely updates, expert opinions, and valuable information to help you navigate the dynamic cryptocurrency landscape. From in-depth analysis to actionable tips, our blog is designed to keep you informed and empowered in your crypto journey..</p>
+          <hr class="bottom-line">
+        </div>
+        {% for blog in blogs %}
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="blog-sec">
+            <div class="blog-img">
+              <a href="">
+                <img src={{blog.img.url}} class="img-responsive">
+              </a>
+            </div>
+            <div class="blog-info">
+              <h2>{{blog.title}}</h2>
+              <div class="blog-comment">
+                <p>Posted In: <span>{{blog.Created_date}}</span> at {{blog.Created_time}}</p>
+                <p>
+                  {% comment %} <span><a href="#"><i class="fa fa-comments"></i></a> 15</span>
+                  <span><a href="#"><i class="fa fa-eye"></i></a> 11</span></p> {% endcomment %}
+              </div>
+              <p>{{blog.Discription}}</p>
+              <a href={% url "blog" blog.id %} class="read-more">Read more →</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
