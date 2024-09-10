@@ -5,7 +5,7 @@
         "use":"@vercel/python",
         "config":{
             "maxLamdaSize":"15mb",
-            "runtime":"python3.10"
+            "runtime":"python3.12"
         }},
         {
             "src":"build_files.sh",
