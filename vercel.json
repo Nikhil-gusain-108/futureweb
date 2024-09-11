@@ -1,19 +1,16 @@
 {
     "version":2,
-    "builds":[
-        {"src":"futureEarnersWeb/asgi.py",
-        "use":"@vercel/python",
+    "builds": [
+      { 
+        "src": "futureEarnersWeb/asgi.py",
+         "use": "@vercel/python"
+     },{
+        "src":"build_files.sh",
+        "use":"@vercel/static-build",
         "config":{
-            "maxLamdaSize":"15mb",
-            "runtime":"python3.12"
-        }},
-        {
-            "src":"build_files.sh",
-            "use":"@vercel/static-build",
-            "config":{
-                "disDir":"staticfiles_build"
-            }
+            "disDir":"staticfiles_build"
         }
+    }
     ],
     "routes":[
         {
@@ -26,3 +23,4 @@
         }
     ]
 }
+  
